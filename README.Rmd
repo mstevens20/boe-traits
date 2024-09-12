@@ -1,0 +1,8 @@
+---
+title: "README"
+output: html_document
+date: "2024-09-12"
+---
+
+This repo was made to clean and analyse field work data from 2024, it will probably be used for more than that but that is what it is starting with
+
