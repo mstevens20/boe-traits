@@ -187,10 +187,31 @@ head(d123)
 # lets take a peak        ####
 table(d123$Site)
 d123[d123$Site %in% "", ]
+table(d123$Site, d123$trip)
 
+# I am removing these emptyies
+d123 <- d123[!d123$Site %in% "", ]
+
+# updated genosuspect column ####
+table(d123$genoSuspect)
+
+# start with SOV t1
+
+d123[d123$Site %in% "SOV" & d123$TR %in% 1, ]
+# quadrat one is just stricta
+d123[d123$Site %in% "SOV" & d123$TR %in% 1 & d123$QUAD %in% 1, "genoSuspect"] <- "str"
+
+# qudarat 2 is a mixture of stricta and hybrids ??
+
+# retro y>= 15
+d123[d123$Site %in% "SOV" & d123$TR %in% 1 & d123$y >= 1500, ]
 
 # fix small errors in TWM T2 ####
 d1[d1$ID %in% "p525", ]
 d1[d1$ID %in% "p525", 'x']
 # start here after fixing the verification of the first set (hence why we don't have a notes column!)
 
+
+# export data frame ####
+
+# write.csv(d123, "data/fieldData2024Full.10022024.cvs", row.names = F)
