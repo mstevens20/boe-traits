@@ -214,4 +214,5 @@ d1[d1$ID %in% "p525", 'x']
 
 # export data frame ####
 
-# write.csv(d123, "data/fieldData2024Full.10022024.cvs", row.names = F)
+# write.csv(d123, "data/fieldData2024Full.10022024.csv", row.names = F)
+
